@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Internship Opportunities</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      padding: 30px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .card a {
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .card a:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+    }
+
+
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+    }
+
+    .logo {
+      font-size: 30px;
+      color: orange;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px;
+    }
+
+
+        @media screen and (max-width: 768px) {
+      
+
+      .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        text-align: center;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .menu ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hamburger {
+        display: flex;
+        
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+      <h2 class="logo">Equal Opp</h2>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="menu">
+        <ul>
+          
+          <li><a href="scholar.html">SCHOLAR</a></li>
+          <li><a href="education.html">EDUCATION</a></li>
+          <li><a href="jobs.html">JOBS</a></li>
+          <li><a href="internship.html">INTERNSHIP</a></li>
+        </ul>
+      </div>
+    </div><br>
+
+<div class="container">
+
+  <div class="card">
+    <img src="microsoft intern.png" alt="Microsoft">
+    <a href="https://careers.microsoft.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="google carrer intern.png" alt="Google">
+    <a href="https://www.google.com/a" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="amazon .png" alt="Amazon">
+    <a href="https://www.amazon.jobs/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="intel careers.png" alt="Intel">
+    <a href="https://intel.wd1.myworkdayjobs.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="ibm intern.png" alt="IBM">
+    <a href="https://www.ibm.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="infosys.png" alt="Infosys">
+    <a href="https://www.infosys.com/instep/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="cognient.png" alt="Cognizant">
+    <a href="https://careers.cognizant.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="capgemini.png" alt="Capgemini">
+    <a href="https://www.capgemini.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="isro intern.png" alt="ISRO">
+    <a href="https://www.isro.gov.in/Careers.html" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="bhel intern.png" alt="BHEL">
+    <a href="https://careers.bhel.in/index.jsp" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="atomic energy.png" alt="BARC">
+    <a href="https://www.barc.gov.in/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="nptc intern.png" alt="NTPC">
+    <a href="https://ntpc.co.in/en/careers" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="bharat electronics.png" alt="BEL">
+    <a href="https://bel-india.in/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="iit bombay.png" alt="IIT Bombay">
+    <a href="https://rnd.iitb.ac.in/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="council intern.png" alt="CSIR">
+    <a href="https://www.csir.res.in/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="indian istitution.png" alt="IISc">
+    <a href="https://www.iisc.ac.in/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="nvidia.png" alt="NVIDIA">
+    <a href="https://www.nvidia.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="siemens.png" alt="Siemens">
+    <a href="https://www.siemens.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="texas.png" alt="Texas Instruments">
+    <a href="https://careers.ti.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="oracle.png" alt="Oracle">
+    <a href="https://www.oracle.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="flipkart.png" alt="Flipkart">
+    <a href="https://www.flipkartcareers.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="eternal.png" alt="Eternal">
+    <a href="https://www.eternal.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="paytm.png" alt="Paytm">
+    <a href="https://paytm.com/careers/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="aicte.png" alt="AICTE">
+    <a href="https://internship.aicte-india.org/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="unicef.png" alt="UNICEF">
+    <a href="https://www.unicef.org/india/Internship" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="internshala.png" alt="Internshala">
+    <a href="https://internshala.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="linked in.png" alt="LinkedIn">
+    <a href="https://www.linkedin.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="indeed intern.png" alt="Indeed">
+    <a href="https://www.indeed.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="naukri.png" alt="Naukri">
+    <a href="https://www.naukri.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="lets intern.png" alt="LetsIntern">
+    <a href="https://www.letsintern.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="glass door intern.png" alt="Glassdoor">
+    <a href="https://www.glassdoor.co.in/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="well found.png" alt="Wellfound">
+    <a href="https://wellfound.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="chegg shkills.png" alt="Chegg">
+    <a href="https://www.chegg.com/" target="_blank">Visit Site</a>
+  </div>
+
+</div>
+
+</body>
+</html>

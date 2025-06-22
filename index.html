@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Equal Opp - Login & Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: url('logo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      color: white;
+    }
+
+    .main {
+      padding: 20px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+    }
+
+    .logo {
+      font-size: 30px;
+      color: orange;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10%;
+    }
+
+    .content {
+      max-width: 500px;
+    }
+
+    h1 {
+      color: #ff7200;
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .form-box {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      width: 430px;
+    }
+
+    .form-box h2 {
+      text-align: center;
+      color: #ff7200;
+      margin-bottom: 15px;
+    }
+
+    .form-box input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #ff7200;
+      background: transparent;
+      color: white;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: #ff7200;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .toggle-link {
+      color: #ff7200;
+      text-decoration: underline;
+      cursor: pointer;
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .success-image {
+      width: 100%;
+      max-width: 400px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        text-align: center;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .menu ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hamburger {
+        display: flex;
+        
+      }
+
+      .form-box, .content {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="navbar">
+      <h2 class="logo">Equal Opp</h2>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <!-- <li><a href="scholar.html">SCHOLAR</a></li>
+          <li><a href="education.html">EDUCATION</a></li>
+          <li><a href="jobs.html">JOBS</a></li>
+          <li><a href="internship.html">INTERNSHIP</a></li> -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="content-wrapper" id="content-wrapper">
+      <div class="content">
+        <h1>Opportunities <br><span style="color: aliceblue;">for</span><br> Students</h1>
+        <p>This app provides internships, scholarships, and job opportunities for students and job seekers.</p>
+      </div>
+
+      <div class="form-box" id="login-form">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <span class="toggle-link" onclick="toggleForm('signup')">Don't have an account? Sign Up</span>
+      </div>
+
+      <div class="form-box" id="signup-form" style="display:none">
+        <h2>Sign Up</h2>
+        <input type="text" id="signup-name" placeholder="Full Name" required>
+        <input type="email" id="signup-email" placeholder="Email" required>
+        <input type="tel" id="signup-phone" placeholder="Phone Number" required>
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <button onclick="signup()">Sign Up</button>
+        <span class="toggle-link" onclick="toggleForm('login')">Already have an account? Login</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAVOso_GISeaxmZekyhsyLVWojB7IjrAiM",
+      authDomain: "equal-opp.firebaseapp.com",
+      projectId: "equal-opp",
+      storageBucket: "equal-opp.firebasestorage.app",
+      messagingSenderId: "1041634921672",
+      appId: "1:1041634921672:web:bbb1fd2acbc73626e5a9fd",
+      measurementId: "G-11MTWZMH47"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    function toggleMenu() {
+      document.querySelector('.menu').classList.toggle('show');
+    }
+
+    function toggleForm(formType) {
+      document.getElementById('login-form').style.display = formType === 'login' ? 'block' : 'none';
+      document.getElementById('signup-form').style.display = formType === 'signup' ? 'block' : 'none';
+    }
+
+    function login() {
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(() => {
+          alert('Login Successful');
+          clearFields();
+          showSuccessImage();
+        })
+        .catch(error => alert(error.message));
+    }
+
+    function signup() {
+      const email = document.getElementById('signup-email').value;
+      const password = document.getElementById('signup-password').value;
+
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          alert('Signup Successful');
+          clearFields();
+        })
+        .catch(error => alert(error.message));
+    }
+
+    function clearFields() {
+      document.querySelectorAll('input').forEach(input => input.value = '');
+    }
+
+    function showSuccessImage() {
+      const contentWrapper = document.getElementById('content-wrapper');
+      const navcontent=document.getElementsByClassName("navbar")[0]
+      navcontent.innerHTML=`
+      <h2 class="logo">Equal Opp</h2>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="menu">
+        <ul>
+          
+          <li><a href="scholar.html">SCHOLAR</a></li>
+          <li><a href="education.html">EDUCATION</a></li>
+          <li><a href="jobs.html">JOBS</a></li>
+          <li><a href="internship.html">INTERNSHIP</a></li>
+        </ul>
+      </div>`
+      contentWrapper.innerHTML = `
+      
+        <div style="text-align: center;">
+          <h2 style="color: orange; padding:20px; border-radius:30px; background-color: rgba(0, 0, 0, 0.9); margin-bottom: 20px; font-size: xx-large;">Welcome to Equal Opportunities...!</h2>
+          <img src="signup_logo.jpg" class="success-image" alt="Success">
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>

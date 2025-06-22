@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job and Government Links</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      padding: 30px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 280px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      max-width: 100%;
+      height: 100%;
+      margin-bottom: 15px;
+      border-radius: 6px;
+    }
+
+    .card a {
+      text-decoration: none;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .card a:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+    }
+
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+    }
+
+    .logo {
+      font-size: 30px;
+      color: orange;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px;
+    }
+
+
+        @media screen and (max-width: 768px) {
+      
+
+      .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        text-align: center;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .menu ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hamburger {
+        display: flex;
+        
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+      <h2 class="logo">Equal Opp</h2>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="menu">
+        <ul>
+          
+          <li><a href="scholar.html">SCHOLAR</a></li>
+          <li><a href="education.html">EDUCATION</a></li>
+          <li><a href="jobs.html">JOBS</a></li>
+          <li><a href="internship.html">INTERNSHIP</a></li>
+        </ul>
+      </div>
+    </div><br>
+
+<div class="container">
+
+  <!-- Example cards (replace/add as needed) -->
+  <div class="card">
+    <img src="naukri.png" alt="Naukri">
+    <a href="https://www.naukri.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="indeed.png" alt="Indeed">
+    <a href="https://in.indeed.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="amazon.png" alt="Amazon">
+    <a href="https://www.amazon.jobs/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="careers in apple.png" alt="Apple">
+    <a href="https://www.apple.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="ibm.png" alt="IBM">
+    <a href="https://www.ibm.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="git hub.png" alt="GitHub">
+    <a href="https://www.github.careers/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="jp morgan.png" alt="JP Morgan">
+    <a href="https://careers.jpmorgan.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="accenture.png" alt="Accenture">
+    <a href="https://www.accenture.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="remote rocket.png" alt="Remote Rocket">
+    <a href="https://www.remoterocketship.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="linked in.png" alt="LinkedIn">
+    <a href="https://www.linkedin.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <!-- Add the rest of your cards below the same way -->
+  <!-- Keep duplicating the block below and replacing image & link -->
+
+  <div class="card">
+    <img src="arc.png" alt="Arc">
+    <a href="https://arc.dev/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="glass door.png" alt="Glassdoor">
+    <a href="https://www.glassdoor.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="way up.png" alt="WayUp">
+    <a href="https://www.wayup.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="hack earth.png" alt="HackerEarth">
+    <a href="https://www.hackerearth.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="leet code.png" alt="Leetcode">
+    <a href="https://leetcode.com/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="rrb.png" alt="RRB">
+    <a href="https://www.rrbcdg.gov.in/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="ssc.png" alt="SSC">
+    <a href="https://ssc.gov.in/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="sbi.png" alt="SBI">
+    <a href="https://sbi.co.in/web/careers" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="isro.png" alt="ISRO">
+    <a href="https://www.isro.gov.in/" target="_blank">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="ntpc.png" alt="NTPC">
+    <a href="https://careers.ntpc.co.in/" target="_blank">Visit Site</a>
+  </div>
+
+  <!-- Continue adding the remaining image + link combinations -->
+  <!-- ... -->
+
+</div>
+
+</body>
+</html>
+
