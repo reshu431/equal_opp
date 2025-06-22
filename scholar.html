@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scholarship and Education Links</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 250px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #007BFF;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .card a:hover {
+      background-color: #0056b3;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0px 20px;
+    }
+
+    .logo {
+      font-size: 30px;
+      color: orange;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px;
+    }
+
+
+        @media screen and (max-width: 768px) {
+      
+
+      .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        text-align: center;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .menu ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hamburger {
+        display: flex;
+        
+      }
+
+    }
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="navbar">
+      <h2 class="logo">Equal Opp</h2>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="menu">
+        <ul>
+          
+          <li><a href="scholar.html">SCHOLAR</a></li>
+          <li><a href="education.html">EDUCATION</a></li>
+          <li><a href="jobs.html">JOBS</a></li>
+          <li><a href="internship.html">INTERNSHIP</a></li>
+        </ul>
+      </div>
+    </div><br>
+
+<div class="container">
+  <div class="card">
+    <img src="akash.png" alt="Akash">
+    <a href="https://iacst.aakash.ac.in" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="bmu.png" alt="BMU">
+    <a href="https://www.bmu.edu.in/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="buddy.png" alt="Buddy4Study">
+    <a href="https://www.buddy4study.com/scholarships" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="cambridge btech.png" alt="Cambridge">
+    <a href="https://engg.cambridge.edu.in/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="chin.png" alt="CVV">
+    <a href="https://www.cvv.ac.in/scholarships" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="department of higher education.png" alt="Dept. Higher Education">
+    <a href="https://www.buddy4study.com/scholarships" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="ffe.png" alt="FFE">
+    <a href="https://ffe.org/scholarships" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="idfc.png" alt="IDFC Bank">
+    <a href="https://www.idfcfirstbank.com/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="iet.png" alt="IET">
+    <a href="https://scholarships.theietevents.com/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="lpu.png" alt="LPU">
+    <a href="https://www.lpu.in/scholarship/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="nsp.png" alt="NSP">
+    <a href="https://scholarships.gov.in/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="prime minister.png" alt="MyScheme">
+    <a href="https://www.myscheme.gov.in/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="reliance.png" alt="Reliance Scholarship">
+    <a href="https://www.scholarships.reliancefoundation.org/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="bsbi.png" alt="BSBI">
+    <a href="https://web.berlinsbi.com/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="jain.png" alt="Jain University">
+    <a href="https://set.jainuniversity.ac.in/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="sharda.png" alt="Sharda University">
+    <a href="https://admissions.sharda.ac.in/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="dayananda university.png" alt="DSU">
+    <a href="https://www.dsu.edu.in/btech/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="vidhyaa.png" alt="Vidhyaa">
+    <a href="https://www.vidhyaa.in/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="aicte.png" alt="AICTE">
+    <a href="https://www.aicte-india.org/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="jhanabhumi.png" alt="Jnanabhumi">
+    <a href="https://jnanabhumi.ap.gov.in/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="college.png" alt="CollegeDunia">
+    <a href="https://collegedunia.com/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="carrer.png" alt="Careers360">
+    <a href="https://engineering.careers360.com/" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="gedu.png" alt="Global Education">
+    <a href="https://gedu.global/l" target="_blank">Visit Site</a>
+  </div>
+  <div class="card">
+    <img src="upefs.png" alt="UPES">
+    <a href="https://apply.upes.ac.in/" target="_blank">Visit Site</a>
+  </div>
+</div>
+
+</body>
+</html>
